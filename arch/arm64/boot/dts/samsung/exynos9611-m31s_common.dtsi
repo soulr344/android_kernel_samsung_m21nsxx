@@ -20,10 +20,6 @@
 
 / {
 
-	chosen: chosen {
-		bootargs = "console=ram skip_initramfs rootwait ro init=/init clk_ignore_unused bcm_setup=0xffffff80f8e00000 androidboot.hardware=exynos9611 androidboot.selinux=permissive androidboot.debug_level=0x4948 firmware_class.path=/vendor/firmware ecd_setup=disable reserve-fimc=0xffffff80f9fe0000 pmic_info=0x3";
-	};
-
 	fragment@model {
 		target-path = "/";
 		__overlay__ {
@@ -304,8 +300,8 @@
 
 						l33_reg: LDO33 {
 							regulator-name = "vdd_ldo33";
-							regulator-min-microvolt = <800000>;
-							regulator-max-microvolt = <1950000>;
+							regulator-min-microvolt = <1800000>;
+							regulator-max-microvolt = <1800000>;
 							regulator-ramp-delay = <12000>;
 						};
 
@@ -606,6 +602,7 @@
 				hto-timeout = <80>;
 				samsung,dw-mshc-ciu-div = <3>;
 				clock-frequency = <800000000>;
+				ssc-rate = <3>;
 				samsung,dw-mshc-sdr-timing = <3 0 2 0>;
 				samsung,dw-mshc-ddr-timing = <3 0 2 1>;
 				samsung,dw-mshc-sdr50-timing = <3 0 4 2>;

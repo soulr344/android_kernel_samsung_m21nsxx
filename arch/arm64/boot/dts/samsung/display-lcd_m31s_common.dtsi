@@ -72,6 +72,11 @@
 				cmd_underrun_lp_ref = <1886>;	/* for underrun detect at command mode */
 				mres_en = <0>;
 				noncontinuous_clklane = <1>;	/* 0: Disable, 1: Enable */
+				hdr_num = <1>;
+				hdr_type = <2 0 0 0>; /* 1: DOLBY_VISION, 2: HDR10, 3: HLG */
+				hdr_max_luma = <4000000>;
+				hdr_max_avg_luma = <1200000>;
+				hdr_min_luma = <5>;
 				decon_board = <&decon_board_ea8076>;
 			};
 		};

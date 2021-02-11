@@ -195,6 +195,7 @@
 		ti,channels = <1>;
 		ti,reset-gpio = <&gpm0 0 0>;
 		/* ti,irq-gpio = <0 0 0>;  Not connected */
+		ti,bst-clk-src = <1>;
 		ti,port_id = <0x1000>;
 		ti,re_min = <2621440>;
 		ti,re_max = <5242880>;

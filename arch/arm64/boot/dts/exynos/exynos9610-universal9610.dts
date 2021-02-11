@@ -1803,6 +1803,8 @@
 	#address-cells = <1>;
 	#size-cells = <0>;
 	status = "okay";
+	samsung,fix-doxfer-return;
+	samsung,glitch-filter;
 	sm5713@49{
 		compatible = "siliconmitus,sm5713mfd";
 		reg = <0x49>;

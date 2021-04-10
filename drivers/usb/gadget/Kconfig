@@ -59,6 +59,15 @@ config USB_GADGET_DEBUG
 	   trying to track down.  Never enable these messages for a
 	   production build.
 
+config USB_ANDROID_SAMSUNG_MTP
+	boolean "Samsung MTP function"
+	depends on USB_G_ANDROID && !SEC_FACTORY
+	help
+	  Provides Media Transfer Protocol (MTP) support
+	  for samsung gadget driver.
+	  If you enable this option,
+	  google mtp will be changed to samsung mtp.
+
 config USB_GADGET_VERBOSE
 	bool "Verbose debugging Messages (DEVELOPMENT)"
 	depends on USB_GADGET_DEBUG
